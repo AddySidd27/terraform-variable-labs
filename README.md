@@ -34,7 +34,18 @@ Each variable type (String, List, Map, Boolean, Object) contains **50 labs**, di
 
 Follow these steps to test any lab locally:
 
-1️⃣ **Initialize Terraform** to download required providers  
 ```bash
+# Step 1 — Initialize Terraform
 terraform init
 
+# Step 2 — Review the execution plan
+terraform plan -var-file="terraform.tfvars"
+
+# Step 3 — Apply the configuration
+terraform apply -var-file="terraform.tfvars"
+# Type 'yes' when prompted to confirm deployment.
+
+# Step 4 — Destroy resources after testing to avoid AWS costs
+terraform destroy -var-file="terraform.tfvars"
+
+💡 Tip: Always clean up after testing using the destroy command.
