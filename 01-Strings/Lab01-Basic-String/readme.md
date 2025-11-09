@@ -26,8 +26,8 @@ environment = "production"
 Option 1 — Default Run (uses default = "dev")
 bash
 Copy code
-terraform init
-terraform plan
+terraform init  
+terraform plan  
 terraform apply
 Expected Output
 
@@ -37,8 +37,8 @@ env_message = "This is the dev environment"
 Option 2 — Using terraform.tfvars (uses "production")
 bash
 Copy code
-terraform init
-terraform plan -var-file="terraform.tfvars"
+terraform init  
+terraform plan -var-file="terraform.tfvars"  
 terraform apply -var-file="terraform.tfvars"
 Expected Output
 
@@ -52,7 +52,7 @@ If you don’t use -var-file, Terraform uses the default "dev".
 
 If you provide terraform.tfvars, it overrides the default with "production".
 
-This helps manage multiple environments like dev/test/prod easily.
+Helps manage multiple environments like dev/test/prod easily.
 
 🧾 Summary
 Concept	Description
@@ -63,13 +63,13 @@ tfvars Override	Values in .tfvars file override defaults
 🧑‍💻 Example Workflow
 bash
 Copy code
-# Default run (uses 'dev')
-terraform apply
+# Default run (uses 'dev')  
+terraform apply  
 
-# Run with .tfvars (uses 'production')
-terraform apply -var-file="terraform.tfvars"
+# Run with .tfvars (uses 'production')  
+terraform apply -var-file="terraform.tfvars"  
 
-# Clean up resources
+# Clean up resources  
 terraform destroy -var-file="terraform.tfvars"
 🏁 Lab Outcome
 You learned how to:
