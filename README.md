@@ -39,13 +39,13 @@ Follow these steps to test any lab locally:
 terraform init
 
 # Step 2 — Review the execution plan
-terraform plan -var-file="terraform.tfvars"
+terraform plan
 
 # Step 3 — Apply the configuration
-terraform apply -var-file="terraform.tfvars"
+terraform apply
 # Type 'yes' when prompted to confirm deployment.
 
 # Step 4 — Destroy resources after testing to avoid AWS costs
-terraform destroy -var-file="terraform.tfvars"
+terraform destroy
 
 💡 Tip: Always clean up after testing using the destroy command.
