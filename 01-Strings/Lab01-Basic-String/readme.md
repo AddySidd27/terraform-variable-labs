@@ -28,13 +28,6 @@ output "env_message" {
 ### 📄 terraform.tfvars  
 ```hcl
 environment = "production"
-▶️ How to Run
-Option 1 — Default Run (uses default = "dev")
-bash
-Copy code
-terraform init  
-terraform plan  
-=======
 ```
 
 ---
@@ -45,19 +38,12 @@ terraform plan
 ```bash
 terraform init
 terraform plan
->>>>>>> 3e4b26f (Added Lab01 Basic String Interpolation with formatted markdown)
 terraform apply
 ```
 
 **Expected Output**
 ```ini
 env_message = "This is the dev environment"
-Option 2 — Using terraform.tfvars (uses "production")
-bash
-Copy code
-terraform init  
-terraform plan -var-file="terraform.tfvars"  
-=======
 ```
 
 ---
@@ -66,7 +52,6 @@ terraform plan -var-file="terraform.tfvars"
 ```bash
 terraform init
 terraform plan -var-file="terraform.tfvars"
->>>>>>> 3e4b26f (Added Lab01 Basic String Interpolation with formatted markdown)
 terraform apply -var-file="terraform.tfvars"
 ```
 
@@ -80,22 +65,10 @@ env_message = "This is the production environment"
 ### 💬 Explanation  
 `${var.environment}` dynamically injects the variable value into the string.  
 
-Helps manage multiple environments like dev/test/prod easily.
-=======
 If you don’t use `-var-file`, Terraform picks the default value `"dev"`.  
->>>>>>> 3e4b26f (Added Lab01 Basic String Interpolation with formatted markdown)
 
 If you use `terraform.tfvars`, it overrides the default with `"production"`.  
 
-🧑‍💻 Example Workflow
-bash
-Copy code
-# Default run (uses 'dev')  
-terraform apply  
-
-# Run with .tfvars (uses 'production')  
-terraform apply -var-file="terraform.tfvars"  
-=======
 This helps manage multiple environments like dev/test/prod easily.  
 
 ---
@@ -116,9 +89,8 @@ terraform apply
 
 # Run with .tfvars (uses "production")
 terraform apply -var-file="terraform.tfvars"
->>>>>>> 3e4b26f (Added Lab01 Basic String Interpolation with formatted markdown)
 
-# Clean up resources  
+# Clean up resources
 terraform destroy -var-file="terraform.tfvars"
 ```
 
@@ -127,7 +99,6 @@ terraform destroy -var-file="terraform.tfvars"
 ### 🏁 Lab Outcome  
 You have learned how to:
 
-Apply and destroy infrastructure cleanly
-
-🔗 Next Lab
-➡️ Lab 02 — String Concatenation and Dynamic Messages
+- Use string interpolation in Terraform  
+- Manage default and external variable values  
+- Apply and destroy configurations cleanly  
