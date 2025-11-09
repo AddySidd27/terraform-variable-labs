@@ -95,21 +95,8 @@ Learn to organize, scale, and maintain Terraform environments effectively.
 
 ---
 
-## 🤝 Contributing  
-
-If you find an issue or want to suggest improvements, feel free to open a pull request or create an issue in this repository.  
-All contributions are welcome!  
-
----
-
-## 📄 License  
-
-This project is licensed under the [MIT License](LICENSE).  
-
----
-
 ## ✍️ Author  
 
-**Adnan Ahmed Siddiqui**  
+**Adnan A Siddiqui**  
 Senior Cloud & Infrastructure Architect  
 🌐 [GitHub Profile](https://github.com/AddySidd27)  
